@@ -1,0 +1,23 @@
+ let vectors = [[7, 1, 1],[6, 0, 2], [5, 7, 0], [3, 1, 2], [2, 3 ,8], [0, 0, 0]]
+
+FUNCTION dotProduct(vector1, vector2){
+    let result = 0;
+    FOR(let i = 0; i < vector1.length; i++)
+        result += vector1[i] * vector2[i]
+    END_FOR
+    return result
+  }
+
+  //ALgo
+  ALGORITHM dot_product
+  VAR
+    i: INTEGER;
+    vectors: ARRAY_OF integer[3];
+  BEGIN
+  FOR(i=0; i<vectors.length;i++)
+    FOR(let j=i;j<vectors.length;j++)
+        IF(dotProduct(vectors[i],vectors[j] === 0))
+        console.log('${vectors[i]} and ${vectors[j]} are orthogonal')
+        END_IF
+    END_FOR
+  END_FOR
